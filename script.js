@@ -3,7 +3,7 @@ var CSbody = document.querySelector('body');
 const CSnavbarMenu = document.querySelector('#cs-navigation');
 const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
 
-CShamburgerMenu.addEventListener('click', function () {
+    CShamburgerMenu.addEventListener('click', function ()  {
 	CShamburgerMenu.classList.toggle('cs-active');
 	CSnavbarMenu.classList.toggle('cs-active');
 	CSbody.classList.toggle('cs-open');

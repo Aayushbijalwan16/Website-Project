@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <!-- <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar"><br> -->
+        <input type="radio" id="student" name="user-type" value="student" checked>
+        <label for="student">As Student</label>
+        <input type="radio" id="tpo" name="user-type" value="tpo">
+        <label for="tpo">As Traning & Placement Officer (TPO)</label><br>
+        <a href="/Website Project/include/Login/index.html">Login</a>
+    </div>
+  </form>
+  <script src="script.js"></script>
+</div>
+</body>
+</html>

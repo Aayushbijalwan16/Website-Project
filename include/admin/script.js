@@ -1,4 +1,11 @@
-// Toggle sidebar on mobile
-document.querySelector('.sidebar h1').addEventListener('click', function() {
-	document.querySelector('.sidebar').classList.toggle('collapsed');
+const allSideMenu = document.querySelectorAll('#sidebar .side-menu.top li a');
+allSideMenu.forEach(item=> {
+	const li = iitem.parentElement;
+	
+	item.addEventListener('click',function (){
+		allSideMenu.forEach(i=> {
+			i.parentElement.classList.remove('active');
+        })
+		li.classList.add('active');
+	})
 });

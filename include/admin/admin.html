@@ -3,16 +3,33 @@
 <head>
 	<title>Admin Dashboard</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<body>
-	<div class="sidebar">
-		<h1>Admin Dashboard</h1>
-		<ul>
-			<li><a href="#">Campus Drives</a></li>
-			<li><a href="#">Notifications</a></li>
-			<li><a href="#">Settings</a></li>
+<body>	
+	<section id="sidebar">
+			<a href="#" class="AdminDashboard">
+				<i class="bx bxs-dashboard"></i>
+				<span>Admin Dashboard</span>
+			</a>
+		<ul class="side-menu top">
+			<li class="active"><a href="#" class="Dashboard">
+				<i class="bx bxs-dashboard"></i>
+                <span>Dashboard</span>
+			</a></li>
+			<li><a href="#" class="Campus Drives">
+				<i class="bx bxs-home"></i>
+                <span>Campus Drives</span>
+			</a></li>
+			<li><a href="#" class="Notifications">
+				<i class='bx bxs-notification'></i>
+                <span>Notifications</span>
+			</a></li>
+			<li><a href="#" class="Settings">
+				<i class='bx bx-cog' ></i>
+                <span>Settings</span>
+			</a></li>
 		</ul>
-	</div>
+    </section>
 	<div class="content">
 		
 	<script src="script.js"></script>

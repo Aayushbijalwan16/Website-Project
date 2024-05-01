@@ -54,8 +54,13 @@ body{
 	background:  var(--light);
 	z-index: 1000;
 	font-family: var(--lato);
+	transition: .3s ease;
+	overflow-x: hidden;
 }
 
+#sidebar .hide{
+	width: 60px;
+}
 #sidebar .AdminDashboard{
     font-size: 24px;
 	font-weight: 700;
@@ -82,13 +87,9 @@ body{
 	background: transparent;
 	border-radius: 48px 0 0 48px;
 }
-#sidebar .side-menu li .active{
+#sidebar .side-menu li.active{
 	background: var(--grey);
 	position: relative;
-	color: var(--orange);
-}
-#sidebar .side-menu li .active{
-	color: var(--orange);
 }
 #sidebar .side-menu li .active::before{
 	content: "";
@@ -121,11 +122,19 @@ body{
 	border-radius: 48px;
 	font-size: 18px;
 	color: var(--dark);
+	white-space:  nowrap;
+	overflow-x: hidden;
+}
+#sidebar .hide .side-menu li .active a {
+	color: var(--orange);
+}
+#sidebar .hide .side-menu li a{
+	width: calc(48px - (4px * 2));
+	transition: width .3s ease;
 }
 #sidebar .side-menu li a .logout {
 	color: var(--red);
 }
-
 #sidebar .side-menu.top li a:hover{
     color: var(--orange);
 }
@@ -137,9 +146,16 @@ body{
  /* content */
 #content{
 	position: relative;
-	width: calc(100% -200px);
+	width: calc(100% -280px);
 	left: 280px;
+	transition: .3s ease;
 }
+#sidebar .hide ~ #content{
+	width: calc(100% -60px);
+    left: 60px;
+}
+
+/* Navbar */
 #content nav {
 	height: 56px;
 	background: var(--light);
@@ -149,8 +165,15 @@ body{
 	grid-gap: 24px;
 	font-family: var(--lato);
 }
-img{
-	height: 20px;
+#content nav ::before{
+	content: "";
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	bottom: -40px;
+	left: 0;
+	border-radius: 50%;
+	box-shadow: -20px -20px 0 var(--light);
 }
 #content nav a {
 color: var(--dark);
@@ -180,13 +203,13 @@ margin-right: auto;
 	padding: 0 16px;
 	height: 100%;
 	border: none;
-	background: var(--grey)
 	border-radius: 36px 0 0 36px;
-	outline:none;
+	outline: none;
+	background: var(--grey);
 }
 
 #content nav .form-input button{
-	width: 24px;
+	width: 36px;
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -194,4 +217,34 @@ margin-right: auto;
 	background: var(--blue);
 	color: var(--light);
     font-size: 18px;
+	border: none;
+	outline: none;
+	border-radius: 0 36px 36px 0;
+	cursor: pointer;
+}
+#content nav .notification{
+     font-size: 20px;
+	 position: relative;
+}
+#content nav .notificaton .num{
+	position: absolute;
+	top: 6px;
+	right: 76px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	border: 2px solid var(--light);
+	background: var(--red);
+	color: var(--light);
+	font-weight: 700;
+	font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#content nav .profile img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+	object-fit: cover;
 }

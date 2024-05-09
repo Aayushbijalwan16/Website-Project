@@ -4,19 +4,21 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-
-<div id="id01" class="modal">
+<!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+<!-- <div id="id01" class="modal"> -->
+  
   
   <form class="modal-content animate" action="/action_page.php" method="post">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-              <input type="radio" id="student" name="user-type" value="student" checked>
-        <label for="student">As Student</label>
-        <input type="radio" id="tpo" name="user-type" value="tpo">
+      <div class="card shadow">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <div><input type="radio" id="student" name="user-type" value="student" checked>
+        <label for="student">As Student</label><br></div>
+        <div><input type="radio" id="tpo" name="user-type" value="tpo">
         <label for="tpo">As Traning & Placement Officer (TPO)</label><br>
-        <a href="/Website Project/include/Login/index.html">Login</a>
-    </div>
+        <a href="/Website Project/include/Login/index.html">Login</a></div>
+      </div>
+    </div>  
   </form>
   <script src="script.js"></script>
 </div>

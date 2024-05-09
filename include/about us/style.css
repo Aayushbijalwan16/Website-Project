@@ -25,7 +25,7 @@ body {
   
   .about-section {
     padding: 50px;
-    text-align: center;
+    text-align:center;
     background-color: #474e5d;
     color: white;
   }
@@ -43,7 +43,12 @@ body {
   .title {
     color: grey;
   }
-  
+  .content {
+    padding: 50px;
+    text-align: left;
+    /* background-color: #474e5d; */
+    color: rgb(0, 0, 0);
+  }
   .button {
     border: none;
     outline: 0;

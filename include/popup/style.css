@@ -35,10 +35,10 @@
   color: red;
   cursor: pointer;
 }
-img.avatar {
+/* img.avatar {
     width: 40%;
     border-radius: 50%;
-  }
+  } */
 
 /* Add Zoom Animation */
 .animate {
@@ -55,7 +55,10 @@ img.avatar {
   from {transform: scale(0)} 
   to {transform: scale(1)}
 }
-
+a{
+  display: flex;
+  justify-content: center;
+}
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {

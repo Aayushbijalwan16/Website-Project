@@ -33,20 +33,13 @@ for (const item of dropDowns) {
 }
     
 //dark mode const toggleSwitch = document.querySelector('#toggle--switch');
-const body = document.querySelector('body');
+const switchMode = document.getElementById('switch-mode');
 
-// Listen for a click on the toggle switch
-toggleSwitch.addEventListener('click', function() {
-  // Toggle the dark-mode class on the body element
-  body.classList.toggle('dark-mode');
-
-  // Save the user's preference to local storage
-  localStorage.setItem('dark-mode', body.classList.contains('dark-mode'));
-});
-
-// Check if the user has previously enabled dark mode
-if (localStorage.getItem('dark-mode') === 'true') {
-  body.classList.add('dark-mode');
-  toggleSwitch.checked = true;
-}
+switchMode.addEventListener('change', function () {
+	if(this.checked) {
+		document.body.classList.add('dark');
+	} else {
+		document.body.classList.remove('dark');
+	}
+})
 // dark mode end

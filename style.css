@@ -504,7 +504,11 @@ body {
   #cs-navigation .cs-button-solid:hover:before {
     width: 100%;
   }
-}                                 
+} 
+  a {
+  text-decoration: none;
+  color: #000;
+}                                
     /* nav ends */  
   /* Dark Mode  Start */
   #cs-navigation  .switch-mode {

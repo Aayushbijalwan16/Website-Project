@@ -3,7 +3,7 @@ var CSbody = document.querySelector('body');
 const CSnavbarMenu = document.querySelector('#cs-navigation');
 const CShamburgerMenu = document.querySelector('#cs-navigation .cs-toggle');
 
-    CShamburgerMenu.addEventListener('click', function ()  {
+CShamburgerMenu.addEventListener('click', function () {
 	CShamburgerMenu.classList.toggle('cs-active');
 	CSnavbarMenu.classList.toggle('cs-active');
 	CSbody.classList.toggle('cs-open');
@@ -30,16 +30,4 @@ for (const item of dropDowns) {
 		item.classList.toggle('cs-active');
 	};
 	item.addEventListener('click', onClick);
-}
-    
-//dark mode const toggleSwitch = document.querySelector('#toggle--switch');
-const switchMode = document.getElementById('switch-mode');
-
-switchMode.addEventListener('change', function () {
-	if(this.checked) {
-		document.body.classList.add('dark');
-	} else {
-		document.body.classList.remove('dark');
-	}
-})
-// dark mode end
+}                        
